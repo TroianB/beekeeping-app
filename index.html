@@ -6,38 +6,6 @@
     <meta name="theme-color" content="#facc15" />
     <title>Beekeeping App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Layout tuning for the Apiaries table. */
-      #root > div {
-        padding-left: clamp(1.5rem, 4vw, 4rem) !important;
-        padding-right: clamp(1.5rem, 4vw, 4rem) !important;
-      }
-
-      #root input[placeholder="Search apiaries..."] {
-        max-width: 520px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #root input[placeholder="Search apiaries..."] + div {
-        max-width: 520px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      @media (min-width: 1024px) {
-        #root > div > .grid:has(input[placeholder="Search apiaries..."]) {
-          justify-content: center;
-        }
-      }
-
-      @media (max-width: 640px) {
-        #root > div {
-          padding-left: 1rem !important;
-          padding-right: 1rem !important;
-        }
-      }
-    </style>
   </head>
   <body class="min-h-screen bg-neutral-950">
     <div id="root"></div>
