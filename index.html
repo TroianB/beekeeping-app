@@ -10,28 +10,45 @@
       /* Move the Apiary line numbers left, toward the centre of the screen. */
       #root input[placeholder="Search apiaries..."] + div > div.grid,
       #root input[placeholder="Search apiaries..."] + div > div > div.grid {
-        grid-template-columns: 24px 150px 72px 62px 62px !important;
+        grid-template-columns: 24px 150px 76px 66px 66px !important;
         justify-content: start !important;
       }
 
-      /* Stronger movement on small screens. */
+      #root input[placeholder="Search apiaries..."] + div > div.grid span {
+        white-space: normal !important;
+        line-height: 1.05 !important;
+      }
+
+      /* Small screens: keep the numbers moved left but space the labels better. */
       @media (max-width: 768px) {
         #root input[placeholder="Search apiaries..."] + div > div.grid,
         #root input[placeholder="Search apiaries..."] + div > div > div.grid {
-          grid-template-columns: 20px 92px 58px 48px 48px !important;
-          gap: 0.35rem !important;
+          grid-template-columns: 20px minmax(72px, 1fr) 76px 64px 64px !important;
+          gap: 0.5rem !important;
         }
 
-        #root input[placeholder="Search apiaries..."] + div span {
-          font-size: 0.7rem !important;
+        #root input[placeholder="Search apiaries..."] + div > div.grid span {
+          font-size: 0.66rem !important;
+          text-align: center !important;
+          white-space: normal !important;
+          line-height: 1.05 !important;
+        }
+
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid span {
+          font-size: 0.72rem !important;
         }
       }
 
       @media (max-width: 420px) {
         #root input[placeholder="Search apiaries..."] + div > div.grid,
         #root input[placeholder="Search apiaries..."] + div > div > div.grid {
-          grid-template-columns: 18px 78px 54px 44px 44px !important;
-          gap: 0.25rem !important;
+          grid-template-columns: 18px minmax(54px, 1fr) 70px 56px 56px !important;
+          gap: 0.35rem !important;
+        }
+
+        #root input[placeholder="Search apiaries..."] + div > div.grid span {
+          font-size: 0.62rem !important;
+          letter-spacing: 0 !important;
         }
 
         #root input[placeholder="Search apiaries..."] + div {
