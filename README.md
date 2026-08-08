@@ -14,3 +14,7 @@ https://troianb.github.io/beekeeping-app/
 npm install
 npm run dev
 ```
+
+## Deployment
+
+GitHub Actions builds the Vite app and publishes the `dist` folder to GitHub Pages.
