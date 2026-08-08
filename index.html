@@ -13,6 +13,31 @@
         grid-template-columns: 24px 150px 72px 62px 62px !important;
         justify-content: start !important;
       }
+
+      /* Stronger movement on small screens. */
+      @media (max-width: 768px) {
+        #root input[placeholder="Search apiaries..."] + div > div.grid,
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid {
+          grid-template-columns: 20px 92px 58px 48px 48px !important;
+          gap: 0.35rem !important;
+        }
+
+        #root input[placeholder="Search apiaries..."] + div span {
+          font-size: 0.7rem !important;
+        }
+      }
+
+      @media (max-width: 420px) {
+        #root input[placeholder="Search apiaries..."] + div > div.grid,
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid {
+          grid-template-columns: 18px 78px 54px 44px 44px !important;
+          gap: 0.25rem !important;
+        }
+
+        #root input[placeholder="Search apiaries..."] + div {
+          overflow-x: hidden !important;
+        }
+      }
     </style>
   </head>
   <body class="min-h-screen bg-neutral-950">
