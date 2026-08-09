@@ -8,7 +8,7 @@ function addThemeStyles() {
   style.textContent = `
     #themeToggle {
       position: fixed;
-      top: 0.75rem;
+      bottom: 0.75rem;
       right: 0.75rem;
       z-index: 9999;
       border: 1px solid rgba(250, 204, 21, 0.55);
@@ -95,7 +95,7 @@ function addThemeStyles() {
 
     @media (max-width: 640px) {
       #themeToggle {
-        top: 0.5rem;
+        bottom: 0.5rem;
         right: 0.5rem;
         padding: 0.45rem 0.7rem;
         font-size: 0.72rem;
