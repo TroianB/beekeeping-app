@@ -14,7 +14,7 @@ const AURIB_LOGO_SVG = `
 
   <rect width="620" height="620" fill="transparent"/>
 
-  <g transform="translate(0 0)" filter="url(#auribGlow)">
+  <g filter="url(#auribGlow)">
     <path d="M310 42 466 132v182L310 404 154 314V132Z" fill="none" stroke="url(#auribGold)" stroke-width="25" stroke-linejoin="round"/>
     <path d="M272 212C193 152 115 168 93 216c-21 47 22 87 98 73 43-8 77-32 109-65" fill="none" stroke="url(#auribGold)" stroke-width="28" stroke-linecap="round"/>
     <path d="M348 212c79-60 157-44 179 4 21 47-22 87-98 73-43-8-77-32-109-65" fill="none" stroke="url(#auribGold)" stroke-width="28" stroke-linecap="round"/>
@@ -70,6 +70,7 @@ function addAuriBBrandStyles() {
       align-items: center !important;
       justify-content: center !important;
       overflow: visible !important;
+      pointer-events: none !important;
     }
 
     #auribBrand svg {
@@ -184,13 +185,15 @@ function addAuriBBrand() {
   if (!header) return;
 
   let brand = document.getElementById("auribBrand");
-  if (!brand) {
+  if (!brand || !header.contains(brand)) {
     brand = document.createElement("div");
     brand.id = "auribBrand";
     header.prepend(brand);
   }
 
-  brand.innerHTML = AURIB_LOGO_SVG;
+  if (!brand.querySelector("svg")) {
+    brand.innerHTML = AURIB_LOGO_SVG;
+  }
 }
 
 addAuriBBrandStyles();
@@ -202,6 +205,6 @@ const auriBObserver = new MutationObserver(() => {
 });
 auriBObserver.observe(document.body, { childList: true, subtree: true });
 
-window.setTimeout(addAuriBBrand, 0);
+addAuriBBrand();
 window.setTimeout(addAuriBBrand, 250);
 window.setTimeout(addAuriBBrand, 800);
