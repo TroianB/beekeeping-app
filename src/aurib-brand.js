@@ -1,34 +1,36 @@
 const AURIB_LOGO_SVG = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 210" role="img" aria-label="AuriB logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="AuriB logo">
   <defs>
     <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#fde047"/>
-      <stop offset="0.55" stop-color="#facc15"/>
+      <stop offset="0.5" stop-color="#facc15"/>
       <stop offset="1" stop-color="#f59e0b"/>
     </linearGradient>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.22"/>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.16"/>
     </filter>
   </defs>
 
-  <g filter="url(#softShadow)">
-    <path d="M156 20 234 65v90l-78 45-78-45V65Z" fill="none" stroke="url(#gold)" stroke-width="16" stroke-linejoin="round"/>
-    <path d="M138 98C98 68 58 76 47 101c-10 24 11 45 50 39 22-4 39-17 55-32" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
-    <path d="M174 98c40-30 80-22 91 3 10 24-11 45-50 39-22-4-39-17-55-32" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round"/>
-    <ellipse cx="156" cy="121" rx="33" ry="48" fill="#111111"/>
-    <path d="M127 109c18-15 40-15 58 0" stroke="#ffffff" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95"/>
-    <path d="M126 128c19-13 41-13 60 0" stroke="url(#gold)" stroke-width="16" stroke-linecap="round" fill="none"/>
-    <path d="M130 156c17-11 35-11 52 0" stroke="url(#gold)" stroke-width="16" stroke-linecap="round" fill="none"/>
-    <circle cx="156" cy="70" r="24" fill="#111111"/>
-    <path d="M142 52c-6-22-22-30-32-32" stroke="#111111" stroke-width="9" stroke-linecap="round" fill="none"/>
-    <path d="M170 52c6-22 22-30 32-32" stroke="#111111" stroke-width="9" stroke-linecap="round" fill="none"/>
-    <path d="M156 170l-8 25h16Z" fill="#111111"/>
+  <rect width="520" height="520" rx="38" fill="#ffffff"/>
+
+  <g transform="translate(0 4)" filter="url(#softShadow)">
+    <path d="M260 55 364 115v120l-104 60-104-60V115Z" fill="none" stroke="url(#gold)" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M236 167C181 127 126 137 111 170c-14 32 15 60 68 51 30-5 53-22 75-43" fill="none" stroke="url(#gold)" stroke-width="19" stroke-linecap="round"/>
+    <path d="M284 167c55-40 110-30 125 3 14 32-15 60-68 51-30-5-53-22-75-43" fill="none" stroke="url(#gold)" stroke-width="19" stroke-linecap="round"/>
+    <ellipse cx="260" cy="205" rx="43" ry="64" fill="#111111"/>
+    <path d="M223 189c24-20 52-20 75 0" stroke="#ffffff" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <path d="M222 214c25-18 54-18 79 0" stroke="url(#gold)" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M226 252c23-15 47-15 70 0" stroke="url(#gold)" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <circle cx="260" cy="137" r="31" fill="#111111"/>
+    <path d="M241 114c-8-29-29-40-42-43" stroke="#111111" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <path d="M279 114c8-29 29-40 42-43" stroke="#111111" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <path d="M260 268l-10 34h20Z" fill="#111111"/>
   </g>
 
   <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="900" letter-spacing="-8">
-    <text x="285" y="137" font-size="92" fill="#111111">Auri</text>
-    <text x="456" y="137" font-size="92" fill="url(#gold)">B</text>
-    <polygon points="428,48 440,55 440,69 428,76 416,69 416,55" fill="url(#gold)"/>
+    <text x="78" y="435" font-size="104" fill="#111111">Auri</text>
+    <text x="370" y="435" font-size="104" fill="url(#gold)">B</text>
+    <polygon points="344,326 359,335 359,352 344,361 329,352 329,335" fill="url(#gold)"/>
   </g>
 </svg>`;
 
@@ -43,44 +45,54 @@ function addAuriBBrandStyles() {
     #auribBrand {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       flex: 0 0 auto;
-      min-width: 8.2rem;
-      max-width: 11.5rem;
+      width: 8.8rem;
+      min-width: 8.8rem;
+      padding: 0.38rem;
+      border: 2px solid rgba(250, 204, 21, 0.9);
+      border-radius: 1.1rem;
+      background: #ffffff !important;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
 
     #auribBrand img {
       display: block;
-      width: 10.6rem;
-      max-width: 100%;
+      width: 100%;
       height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.25));
+      border-radius: 0.78rem;
+      background: #ffffff !important;
     }
 
+    body:not(.light-mode) #auribBrand,
+    body.dark-mode #auribBrand,
+    body.light-mode #auribBrand {
+      background: #ffffff !important;
+      border-color: rgba(250, 204, 21, 0.95) !important;
+    }
+
+    body:not(.light-mode) #auribBrand img,
+    body.dark-mode #auribBrand img,
     body.light-mode #auribBrand img {
-      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+      background: #ffffff !important;
     }
 
     @media (max-width: 760px) {
       #auribBrand {
-        min-width: 6.7rem;
-        max-width: 8.2rem;
-      }
-
-      #auribBrand img {
-        width: 7.8rem;
+        width: 7rem;
+        min-width: 7rem;
+        padding: 0.32rem;
+        border-radius: 0.95rem;
       }
     }
 
     @media (max-width: 430px) {
       #auribBrand {
-        min-width: 5.8rem;
-        max-width: 7rem;
-      }
-
-      #auribBrand img {
-        width: 6.6rem;
+        width: 6.1rem;
+        min-width: 6.1rem;
+        padding: 0.28rem;
+        border-radius: 0.85rem;
       }
     }
   `;
@@ -101,19 +113,25 @@ function setAuriBPageIdentity() {
 
 function addAuriBBrand() {
   const header = document.querySelector("#root > .mx-auto > div.mb-4.flex");
-  if (!header || document.getElementById("auribBrand")) return;
+  if (!header) return;
 
-  const brand = document.createElement("div");
-  brand.id = "auribBrand";
+  let brand = document.getElementById("auribBrand");
+  if (!brand) {
+    brand = document.createElement("div");
+    brand.id = "auribBrand";
+    header.prepend(brand);
+  }
 
-  const logo = document.createElement("img");
+  let logo = brand.querySelector("img");
+  if (!logo) {
+    logo = document.createElement("img");
+    brand.appendChild(logo);
+  }
+
   logo.src = AURIB_LOGO_SRC;
   logo.alt = "AuriB logo";
   logo.loading = "eager";
   logo.decoding = "async";
-
-  brand.appendChild(logo);
-  header.prepend(brand);
 }
 
 addAuriBBrandStyles();
