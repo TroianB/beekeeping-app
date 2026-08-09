@@ -4,6 +4,7 @@ import BeekeepingApp from "./App.jsx";
 import "./fit-screen.css";
 import "./theme.js";
 import "./csv-controls.js";
+import "./apiary-mobile.js";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
