@@ -72,15 +72,15 @@ function addThemeStyles() {
     }
 
     body.light-mode #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(odd) {
-      background: rgba(250, 204, 21, 0.24) !important;
+      background: rgba(250, 204, 21, 0.15) !important;
     }
 
     body.light-mode #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(even) {
-      background: rgba(255, 255, 255, 0.94) !important;
+      background: rgba(255, 255, 255, 0.98) !important;
     }
 
     body.light-mode #root input[placeholder="Search apiaries..."] + div > div > div.grid:hover {
-      background: rgba(250, 204, 21, 0.38) !important;
+      background: rgba(250, 204, 21, 0.27) !important;
     }
 
     body.light-mode #themeToggle {
