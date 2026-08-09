@@ -20,6 +20,39 @@
         min-width: 0 !important;
       }
 
+      /* Make each apiary row larger and easier to tap/read. */
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid {
+        min-height: 3.4rem !important;
+        padding-top: 0.8rem !important;
+        padding-bottom: 0.8rem !important;
+        border-bottom: 1px solid rgba(250, 204, 21, 0.1) !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(2) {
+        font-size: 0.98rem !important;
+        font-weight: 700 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
+        font-size: 0.9rem !important;
+        font-weight: 800 !important;
+      }
+
+      /* Alternating row colours for readability. */
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(odd) {
+        background: rgba(250, 204, 21, 0.055) !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(even) {
+        background: rgba(0, 0, 0, 0.32) !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid:hover {
+        background: rgba(250, 204, 21, 0.12) !important;
+      }
+
       /* Visual order: Apiary | Singles | Doubles | Total Hives */
       #root input[placeholder="Search apiaries..."] + div > div.grid > *:nth-child(1),
       #root input[placeholder="Search apiaries..."] + div > div > div.grid > *:nth-child(1) {
@@ -71,6 +104,12 @@
           gap: 0.5rem !important;
         }
 
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid {
+          min-height: 3.75rem !important;
+          padding-top: 0.9rem !important;
+          padding-bottom: 0.9rem !important;
+        }
+
         #root input[placeholder="Search apiaries..."] + div > div.grid > span:first-child {
           display: none !important;
         }
@@ -91,10 +130,14 @@
           line-height: 1.05 !important;
         }
 
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(2) {
+          font-size: 0.95rem !important;
+        }
+
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3),
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4),
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
-          font-size: 0.72rem !important;
+          font-size: 0.82rem !important;
           text-align: center !important;
         }
       }
@@ -117,6 +160,12 @@
           font-size: 0.62rem !important;
           letter-spacing: 0 !important;
           text-align: center !important;
+        }
+
+        #root input[placeholder="Search apiaries..."] + div > div > div.grid {
+          min-height: 3.6rem !important;
+          padding-top: 0.85rem !important;
+          padding-bottom: 0.85rem !important;
         }
 
         #root input[placeholder="Search apiaries..."] + div {
