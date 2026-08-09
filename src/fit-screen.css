@@ -40,3 +40,42 @@
     grid-template-columns: 18px minmax(75px, 1fr) 42px 38px 38px !important;
   }
 }
+
+/* Taller Apiaries table labels for easier reading. */
+#root input[placeholder="Search apiaries..."] + div > div.grid {
+  min-height: 3.1rem !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  align-items: center !important;
+}
+
+#root input[placeholder="Search apiaries..."] + div > div.grid > span {
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  line-height: 1.12 !important;
+}
+
+/* Lighter alternating Apiary row backgrounds for easier reading in dark mode. */
+body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(odd) {
+  background: rgba(250, 204, 21, 0.095) !important;
+}
+
+body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(even) {
+  background: rgba(255, 255, 255, 0.065) !important;
+}
+
+body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div > div.grid:hover {
+  background: rgba(250, 204, 21, 0.16) !important;
+}
+
+@media (max-width: 760px) {
+  #root input[placeholder="Search apiaries..."] + div > div.grid {
+    min-height: 3.35rem !important;
+    padding-top: 0.95rem !important;
+    padding-bottom: 0.95rem !important;
+  }
+
+  #root input[placeholder="Search apiaries..."] + div > div.grid > span {
+    font-size: 0.72rem !important;
+  }
+}
