@@ -7,6 +7,11 @@
   padding-right: 0.5rem !important;
 }
 
+/* Hide the Export JSON button while keeping Export CSV visible. */
+#root > .mx-auto > div.mb-4.flex > div:last-child > button:first-child {
+  display: none !important;
+}
+
 /* The Apiaries page used a fixed 520px list column. This keeps the list readable
    but gives more room to the apiary details panel on the right. */
 @media (min-width: 1024px) {
