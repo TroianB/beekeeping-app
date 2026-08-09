@@ -5,6 +5,7 @@ import "./fit-screen.css";
 import "./theme.js";
 import "./csv-controls.js";
 import "./apiary-mobile.js";
+import "./aurib-brand.js";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
