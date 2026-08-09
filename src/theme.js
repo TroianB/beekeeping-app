@@ -8,22 +8,28 @@ function addThemeStyles() {
   style.textContent = `
     #themeToggle {
       position: fixed;
-      bottom: 0.75rem;
+      top: 0.75rem;
       right: 0.75rem;
       z-index: 9999;
-      border: 1px solid rgba(250, 204, 21, 0.55);
+      width: 2.45rem;
+      height: 2.45rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(250, 204, 21, 0.65);
       border-radius: 999px;
       background: #facc15;
       color: #000;
-      padding: 0.55rem 0.9rem;
-      font-size: 0.82rem;
+      padding: 0;
+      font-size: 1.25rem;
       font-weight: 800;
+      line-height: 1;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
       cursor: pointer;
     }
 
     #themeToggle:hover {
       background: #fde047;
+      transform: translateY(-1px);
     }
 
     body.light-mode,
@@ -95,10 +101,11 @@ function addThemeStyles() {
 
     @media (max-width: 640px) {
       #themeToggle {
-        bottom: 0.5rem;
+        top: 0.5rem;
         right: 0.5rem;
-        padding: 0.45rem 0.7rem;
-        font-size: 0.72rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.1rem;
       }
     }
   `;
@@ -112,7 +119,9 @@ function applyTheme(theme) {
 
   const button = document.getElementById("themeToggle");
   if (button) {
-    button.textContent = isLight ? "Dark Mode" : "Light Mode";
+    button.textContent = isLight ? "☾" : "☀";
+    button.title = isLight ? "Switch to dark mode" : "Switch to light mode";
+    button.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
     button.setAttribute("aria-pressed", String(isLight));
   }
 }
@@ -123,7 +132,6 @@ function addThemeButton() {
   const button = document.createElement("button");
   button.id = "themeToggle";
   button.type = "button";
-  button.setAttribute("aria-label", "Switch between dark and light mode");
   document.body.prepend(button);
 
   button.addEventListener("click", () => {
