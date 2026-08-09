@@ -42,18 +42,37 @@ function addAuriBBrandStyles() {
   const style = document.createElement("style");
   style.id = "aurib-brand-styles";
   style.textContent = `
+    /* Put the whole header layout into the requested positions. */
+    #root > .mx-auto {
+      padding-top: 0.5rem !important;
+    }
+
+    #root > .mx-auto > div.mb-4.flex {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      gap: 0.65rem !important;
+      margin-bottom: 1rem !important;
+      min-height: 10.4rem !important;
+      position: relative !important;
+      padding-right: 0 !important;
+    }
+
     #auribBrand {
+      order: 1 !important;
       display: flex;
       align-items: center;
       justify-content: center;
       flex: 0 0 auto;
-      width: 8.8rem;
-      min-width: 8.8rem;
+      width: 9.4rem;
+      min-width: 9.4rem;
       padding: 0.38rem;
-      border: 2px solid rgba(250, 204, 21, 0.9);
+      border: 2px solid rgba(250, 204, 21, 0.95);
       border-radius: 1.1rem;
       background: #ffffff !important;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+      margin: 0 !important;
     }
 
     #auribBrand img {
@@ -78,21 +97,96 @@ function addAuriBBrandStyles() {
       background: #ffffff !important;
     }
 
+    /* Dashboard and Apiaries buttons below the logo. */
+    #root > .mx-auto > div.mb-4.flex > div:nth-child(2) {
+      order: 2 !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 0.5rem !important;
+      margin: 0 !important;
+    }
+
+    /* Export and Import buttons at the top-right, beside the toggle icon. */
+    #root > .mx-auto > div.mb-4.flex > div:last-child {
+      order: 3 !important;
+      position: fixed !important;
+      top: 0.75rem !important;
+      right: 3.65rem !important;
+      z-index: 9998 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      flex-wrap: nowrap !important;
+      gap: 0.45rem !important;
+      margin: 0 !important;
+    }
+
+    #root > .mx-auto > div.mb-4.flex > div:last-child button,
+    #bkImportCsvButton {
+      white-space: nowrap !important;
+      position: relative !important;
+      z-index: 9998 !important;
+    }
+
+    #themeToggle {
+      top: 0.75rem !important;
+      right: 0.75rem !important;
+      z-index: 9999 !important;
+    }
+
     @media (max-width: 760px) {
+      #root > .mx-auto {
+        padding-top: 0.45rem !important;
+      }
+
+      #root > .mx-auto > div.mb-4.flex {
+        min-height: 8.7rem !important;
+        gap: 0.5rem !important;
+      }
+
       #auribBrand {
-        width: 7rem;
-        min-width: 7rem;
+        width: 7.25rem;
+        min-width: 7.25rem;
         padding: 0.32rem;
         border-radius: 0.95rem;
+      }
+
+      #root > .mx-auto > div.mb-4.flex > div:last-child {
+        top: 0.5rem !important;
+        right: 3.1rem !important;
+        gap: 0.3rem !important;
+      }
+
+      #root > .mx-auto > div.mb-4.flex > div:last-child button,
+      #bkImportCsvButton {
+        padding: 0.45rem 0.55rem !important;
+        font-size: 0.72rem !important;
+      }
+
+      #themeToggle {
+        top: 0.5rem !important;
+        right: 0.5rem !important;
       }
     }
 
     @media (max-width: 430px) {
+      #root > .mx-auto > div.mb-4.flex {
+        min-height: 8.15rem !important;
+      }
+
       #auribBrand {
-        width: 6.1rem;
-        min-width: 6.1rem;
+        width: 6.35rem;
+        min-width: 6.35rem;
         padding: 0.28rem;
         border-radius: 0.85rem;
+      }
+
+      #root > .mx-auto > div.mb-4.flex > div:last-child button,
+      #bkImportCsvButton {
+        padding: 0.42rem 0.48rem !important;
+        font-size: 0.68rem !important;
       }
     }
   `;
