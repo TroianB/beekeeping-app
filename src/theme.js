@@ -15,9 +15,9 @@ function addThemeStyles() {
       height: 2.45rem;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(250, 204, 21, 0.65);
       border-radius: 999px;
-      background: #ffffff;
+      background: #facc15;
       color: #000000;
       padding: 0;
       font-size: 1.25rem;
@@ -28,21 +28,8 @@ function addThemeStyles() {
     }
 
     #themeToggle:hover {
-      background: #e5e7eb;
+      background: #fde047;
       transform: translateY(-1px);
-    }
-
-    body:not(.light-mode) #root button,
-    body:not(.light-mode) #bkImportCsvButton {
-      background: #ffffff !important;
-      color: #000000 !important;
-      border-color: rgba(255, 255, 255, 0.9) !important;
-    }
-
-    body:not(.light-mode) #root button:hover,
-    body:not(.light-mode) #bkImportCsvButton:hover {
-      background: #e5e7eb !important;
-      color: #000000 !important;
     }
 
     body.light-mode,
@@ -90,6 +77,20 @@ function addThemeStyles() {
       color: #6b7280 !important;
     }
 
+    body.light-mode #root button,
+    body.light-mode #bkImportCsvButton {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-color: rgba(17, 24, 39, 0.22) !important;
+      box-shadow: 0 6px 14px rgba(17, 24, 39, 0.12) !important;
+    }
+
+    body.light-mode #root button:hover,
+    body.light-mode #bkImportCsvButton:hover {
+      background: #f3f4f6 !important;
+      color: #000000 !important;
+    }
+
     body.light-mode #root input[placeholder="Search apiaries..."] + div > div > div.grid:nth-child(odd) {
       background: rgba(250, 204, 21, 0.15) !important;
     }
@@ -103,13 +104,13 @@ function addThemeStyles() {
     }
 
     body.light-mode #themeToggle {
-      background: #111827;
-      color: #ffffff;
-      border-color: #111827;
+      background: #ffffff;
+      color: #000000;
+      border-color: rgba(17, 24, 39, 0.25);
     }
 
     body.light-mode #themeToggle:hover {
-      background: #374151;
+      background: #f3f4f6;
     }
 
     @media (max-width: 640px) {
