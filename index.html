@@ -25,6 +25,22 @@
         justify-self: stretch !important;
       }
 
+      /* Reverse metric order: Singles, Doubles, Total Hives. */
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(5),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
+        grid-column: 3 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(4),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4) {
+        grid-column: 4 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(3),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3) {
+        grid-column: 5 !important;
+      }
+
       #root input[placeholder="Search apiaries..."] + div > div.grid span {
         white-space: normal !important;
         line-height: 1.05 !important;
