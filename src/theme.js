@@ -15,10 +15,10 @@ function addThemeStyles() {
       height: 2.45rem;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(250, 204, 21, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 999px;
-      background: #facc15;
-      color: #000;
+      background: #ffffff;
+      color: #000000;
       padding: 0;
       font-size: 1.25rem;
       font-weight: 800;
@@ -28,8 +28,21 @@ function addThemeStyles() {
     }
 
     #themeToggle:hover {
-      background: #fde047;
+      background: #e5e7eb;
       transform: translateY(-1px);
+    }
+
+    body:not(.light-mode) #root button,
+    body:not(.light-mode) #bkImportCsvButton {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    body:not(.light-mode) #root button:hover,
+    body:not(.light-mode) #bkImportCsvButton:hover {
+      background: #e5e7eb !important;
+      color: #000000 !important;
     }
 
     body.light-mode,
