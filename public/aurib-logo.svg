@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" role="img" aria-label="AuriB logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe066"/>
+      <stop offset="0.48" stop-color="#facc15"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#facc15" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="620" height="620" fill="transparent"/>
+  <g filter="url(#glow)">
+    <path d="M310 46 468 137v181L310 409 152 318V137Z" fill="none" stroke="url(#gold)" stroke-width="25" stroke-linejoin="round"/>
+    <path d="M274 213C195 153 116 168 94 216c-21 47 22 88 99 74 42-8 76-32 109-66" fill="none" stroke="url(#gold)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M346 213c79-60 158-45 180 3 21 47-22 88-99 74-42-8-76-32-109-66" fill="none" stroke="url(#gold)" stroke-width="28" stroke-linecap="round"/>
+    <circle cx="310" cy="168" r="42" fill="#050505"/>
+    <path d="M286 137c-10-39-39-54-58-59" stroke="#050505" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M334 137c10-39 39-54 58-59" stroke="#050505" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <ellipse cx="310" cy="271" rx="62" ry="92" fill="#050505"/>
+    <path d="M252 239c37-29 79-29 116 0" stroke="url(#gold)" stroke-width="32" stroke-linecap="round" fill="none"/>
+    <path d="M255 307c35-25 75-25 110 0" stroke="url(#gold)" stroke-width="32" stroke-linecap="round" fill="none"/>
+    <path d="M310 359l-15 56h30Z" fill="#050505"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-8">
+    <text x="48" y="540" font-size="132" fill="#050505">Auri</text>
+    <text x="438" y="540" font-size="132" fill="url(#gold)">B</text>
+    <polygon points="404,421 423,432 423,454 404,465 385,454 385,432" fill="url(#gold)"/>
+  </g>
+</svg>
