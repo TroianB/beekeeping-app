@@ -5,6 +5,7 @@
   margin-right: 0 !important;
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
+  padding-top: 3.4rem !important;
 }
 
 /* Hide the Export JSON button while keeping Export CSV visible. */
@@ -31,7 +32,7 @@
   }
 
   [class*="grid-cols-[24px_minmax(120px,1fr)_80px_70px_70px]"] span {
-    font-size: 0.7rem !important;
+    font-size: 0.82rem !important;
   }
 }
 
@@ -39,6 +40,7 @@
   #root > .mx-auto {
     padding-left: 0.25rem !important;
     padding-right: 0.25rem !important;
+    padding-top: 3.25rem !important;
   }
 
   [class*="grid-cols-[24px_minmax(120px,1fr)_80px_70px_70px]"] {
@@ -46,18 +48,29 @@
   }
 }
 
-/* Taller Apiaries table labels for easier reading. */
+/* Taller, larger Apiaries table labels for easier reading. */
 #root input[placeholder="Search apiaries..."] + div > div.grid {
-  min-height: 3.1rem !important;
-  padding-top: 0.85rem !important;
-  padding-bottom: 0.85rem !important;
+  min-height: 3.35rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   align-items: center !important;
 }
 
 #root input[placeholder="Search apiaries..."] + div > div.grid > span {
-  font-size: 0.78rem !important;
+  font-size: 0.98rem !important;
   font-weight: 900 !important;
   line-height: 1.12 !important;
+}
+
+/* Remove the separate green/blue/white label and value colours inside the Apiaries list. */
+body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div.grid > span,
+body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div > div.grid > span {
+  color: #fef3c7 !important;
+}
+
+body.light-mode #root input[placeholder="Search apiaries..."] + div > div.grid > span,
+body.light-mode #root input[placeholder="Search apiaries..."] + div > div > div.grid > span {
+  color: #111827 !important;
 }
 
 /* Lighter alternating Apiary row backgrounds for easier reading in dark mode. */
@@ -75,12 +88,12 @@ body:not(.light-mode) #root input[placeholder="Search apiaries..."] + div > div 
 
 @media (max-width: 760px) {
   #root input[placeholder="Search apiaries..."] + div > div.grid {
-    min-height: 3.35rem !important;
-    padding-top: 0.95rem !important;
-    padding-bottom: 0.95rem !important;
+    min-height: 3.55rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 
   #root input[placeholder="Search apiaries..."] + div > div.grid > span {
-    font-size: 0.72rem !important;
+    font-size: 0.88rem !important;
   }
 }
