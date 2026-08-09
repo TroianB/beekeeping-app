@@ -7,14 +7,46 @@
     <title>Beekeeping App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Apiaries table alignment. */
+      /* Apiaries table alignment. Keep labels and values locked to the same columns. */
       #root input[placeholder="Search apiaries..."] + div > div.grid,
       #root input[placeholder="Search apiaries..."] + div > div > div.grid {
         grid-template-columns: 24px 150px 76px 66px 66px !important;
         justify-content: start !important;
+        align-items: center !important;
       }
 
-      /* Keep metric labels and metric numbers centred in their own columns. */
+      #root input[placeholder="Search apiaries..."] + div > div.grid > *,
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > * {
+        min-width: 0 !important;
+      }
+
+      /* Visual order: Apiary | Singles | Doubles | Total Hives */
+      #root input[placeholder="Search apiaries..."] + div > div.grid > *:nth-child(1),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > *:nth-child(1) {
+        order: 1 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(2),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(2) {
+        order: 2 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(5),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
+        order: 3 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(4),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4) {
+        order: 4 !important;
+      }
+
+      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(3),
+      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3) {
+        order: 5 !important;
+      }
+
+      /* Centre metric labels and the matching numbers under them. */
       #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(3),
       #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(4),
       #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(5),
@@ -23,22 +55,7 @@
       #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
         text-align: center !important;
         justify-self: stretch !important;
-      }
-
-      /* Reverse metric order: Singles, Doubles, Total Hives. */
-      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(5),
-      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
-        grid-column: 3 !important;
-      }
-
-      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(4),
-      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4) {
-        grid-column: 4 !important;
-      }
-
-      #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(3),
-      #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3) {
-        grid-column: 5 !important;
+        grid-column: auto !important;
       }
 
       #root input[placeholder="Search apiaries..."] + div > div.grid span {
@@ -46,7 +63,7 @@
         line-height: 1.05 !important;
       }
 
-      /* Small screens: Apiary label moves left, metric labels stay put, numbers sit centred below labels. */
+      /* Small screens: Apiary label at left, values centred under their labels. */
       @media (max-width: 768px) {
         #root input[placeholder="Search apiaries..."] + div > div.grid,
         #root input[placeholder="Search apiaries..."] + div > div > div.grid {
@@ -54,7 +71,6 @@
           gap: 0.5rem !important;
         }
 
-        /* Header only: remove the empty checkbox label space and make Apiary start at the left. */
         #root input[placeholder="Search apiaries..."] + div > div.grid > span:first-child {
           display: none !important;
         }
@@ -69,9 +85,8 @@
         #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(3),
         #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(4),
         #root input[placeholder="Search apiaries..."] + div > div.grid > span:nth-child(5) {
-          text-align: center !important;
-          justify-self: stretch !important;
           font-size: 0.66rem !important;
+          text-align: center !important;
           white-space: normal !important;
           line-height: 1.05 !important;
         }
@@ -79,9 +94,8 @@
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(3),
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(4),
         #root input[placeholder="Search apiaries..."] + div > div > div.grid > span:nth-child(5) {
-          text-align: center !important;
-          justify-self: stretch !important;
           font-size: 0.72rem !important;
+          text-align: center !important;
         }
       }
 
